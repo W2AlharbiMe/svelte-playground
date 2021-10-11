@@ -9,12 +9,6 @@
     ['Link', '#external'],
   ];
 
-  function setName({ target }) {
-    const { value } = target;
-
-    name = value || 'world';
-  }
-
   function handleMessage({ detail: payload }) {
     const { text } = payload;
 
@@ -26,7 +20,7 @@
   <Header {links} />
   <div>
     <h1>Hello {name}!</h1>
-    <input type="text" placeholder="Enter your name" on:keyup={setName} />
+    <input type="text" placeholder="Enter your name" bind:value={name} />
   </div>
 
   <MainComponent on:message={handleMessage} />
