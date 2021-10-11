@@ -14,6 +14,12 @@
 
     name = value || 'world';
   }
+
+  function handleMessage({ detail: payload }) {
+    const { text } = payload;
+
+    console.log('Hello', name || text);
+  }
 </script>
 
 <main>
@@ -23,7 +29,7 @@
     <input type="text" placeholder="Enter your name" on:keyup={setName} />
   </div>
 
-  <MainComponent />
+  <MainComponent on:message={handleMessage} />
 </main>
 
 <style>

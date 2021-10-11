@@ -2,4 +2,4 @@
   import Outer from './outer.svelte';
 </script>
 
-<Outer />
+<Outer on:message />
