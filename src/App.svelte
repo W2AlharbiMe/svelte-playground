@@ -1,18 +1,21 @@
 <script>
   import Header from './Header.svelte';
   let name = 'world';
+  const links = [
+    ['Home', '/'],
+    ['About', '/about'],
+    ['Link', '/external'],
+  ];
 
   function setName({ target }) {
     const { value } = target;
 
     name = value || 'world';
-
-    console.log(value);
   }
 </script>
 
 <main>
-  <Header />
+  <Header {links} />
   <div>
     <input type="text" placeholder="Enter your name" on:keyup={setName} />
     <h1>Hello {name}!</h1>
