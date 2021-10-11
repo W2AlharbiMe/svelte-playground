@@ -1,5 +1,7 @@
 <script>
   import Header from './Header.svelte';
+  import MainComponent from './dispatch/main.svelte';
+
   let name = 'world';
   const links = [
     ['Home', '#'],
@@ -17,9 +19,11 @@
 <main>
   <Header {links} />
   <div>
-    <input type="text" placeholder="Enter your name" on:keyup={setName} />
     <h1>Hello {name}!</h1>
+    <input type="text" placeholder="Enter your name" on:keyup={setName} />
   </div>
+
+  <MainComponent />
 </main>
 
 <style>
