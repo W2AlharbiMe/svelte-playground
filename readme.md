@@ -1,0 +1,3 @@
+### Svelte playground
+
+try svelte 😎
