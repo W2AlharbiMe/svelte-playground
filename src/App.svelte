@@ -2,9 +2,9 @@
   import Header from './Header.svelte';
   let name = 'world';
   const links = [
-    ['Home', '/'],
-    ['About', '/about'],
-    ['Link', '/external'],
+    ['Home', '#'],
+    ['About', '#about'],
+    ['Link', '#external'],
   ];
 
   function setName({ target }) {
