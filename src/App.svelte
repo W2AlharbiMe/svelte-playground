@@ -1,6 +1,7 @@
 <script>
   import Header from './Header.svelte';
   import MainComponent from './dispatch/main.svelte';
+  import Login from './user/index.svelte';
 
   let name = 'world';
   const links = [
@@ -24,6 +25,10 @@
   </div>
 
   <MainComponent on:message={handleMessage} />
+
+  <hr />
+
+  <Login />
 </main>
 
 <style>
